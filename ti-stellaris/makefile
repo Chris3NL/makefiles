@@ -5,3 +5,6 @@ all:
 
 flash: all
 	lm4flash main.bin
+
+clean:
+	-rm *.o *.d *.out *.bin
