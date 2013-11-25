@@ -17,26 +17,44 @@ LD = arm-none-eabi-ld
 AR = arm-none-eabi-ar
 
 #Compiler flags
-CFLAGS += -mthumb					#Using the Thumb Instruction Set
-CFLAGS += -mcpu=cortex-m4			#The CPU Variant
-CFLAGS += -mfloat-abi=softfp		#Which floating point ABI to use
-CFLAGS += -mfpu=fpv4-sp-d16			#The type of FPU we are using
-CFLAGS += -Os						#Compile with Size Optimizations
-CFLAGS += -ffunction-sections		#Create a separate function section
-CFLAGS += -fdata-sections			#Create a separate data section
-CFLAGS += -MD						#Create dependency files (*.d)
-CFLAGS += -std=c99					#Comply with C99
-CFLAGS += -Wall						#Enable All Warnings 
-CFLAGS += -pedantic					#More ANSI Checks
-CFLAGS += -Dgcc						#Flag used in driverlib for compiler specific flags
-CFLAGS += -DPART_LM4F120H5QR		#Flag used in driverlib for specifying the silicon version.
-CFLAGS += -I$(STALLARISWARE)		#Include StellarisWare
-#CFLAGS += -DTARGET_IS_BLIZZARD_RA1	#Used in driverlib to determine what is loaded in rom.
+CFLAGS += -mthumb
+					#Using the Thumb Instruction Set
+CFLAGS += -mcpu=cortex-m4
+			#The CPU Variant
+CFLAGS += -mfloat-abi=softfp
+		#Which floating point ABI to use
+CFLAGS += -mfpu=fpv4-sp-d16
+			#The type of FPU we are using
+CFLAGS += -Os
+						#Compile with Size Optimizations
+CFLAGS += -ffunction-sections
+		#Create a separate function section
+CFLAGS += -fdata-sections
+			#Create a separate data section
+CFLAGS += -MD
+						#Create dependency files (*.d)
+CFLAGS += -std=c99
+					#Comply with C99
+CFLAGS += -Wall
+						#Enable All Warnings 
+CFLAGS += -pedantic
+					#More ANSI Checks
+CFLAGS += -Dgcc
+						#Flag used in driverlib for compiler specific flags
+CFLAGS += -DPART_LM4F120H5QR
+		#Flag used in driverlib for specifying the silicon version.
+CFLAGS += -I$(STALLARISWARE)
+		#Include StellarisWare
+#CFLAGS += -DTARGET_IS_BLIZZARD_RA1
+	#Used in driverlib to determine what is loaded in rom.
 
 #Linker flags
-LDFLAGS += --gc-sections			#Tell the linker to ignore functions that aren't used.
-LDFLAGS += -T $(LINKSCRIPT)			#Path to Linker Script
-LDFLAGS += --entry ResetISR			#Name of the application entry point
+LDFLAGS += --gc-sections
+			#Tell the linker to ignore functions that aren't used.
+LDFLAGS += -T $(LINKSCRIPT)
+			#Path to Linker Script
+LDFLAGS += --entry ResetISR
+			#Name of the application entry point
 
 #Get the name of the objects
 SOURCES += startup_gcc.c
@@ -61,16 +79,16 @@ LIBM=$(shell $(CC) $(CFLAGS) -print-file-name=libm.a)
 #END MAKEDEF
 
 #default target
-all: $(TARGET).axf
+all: build build/$(TARGET).axf #build/$(TARGET).bin
 
 #make the output dir
-${COMPILER}:
+build:
 	@mkdir -p build
 
 .PHONY: clean flash
 #Flash th
-flash: $(TARGET).bin
-	$(FLASH) $(TARGET).bin
+flash: build/$(TARGET).bin
+	$(FLASH) $(<)
 
 #Clean the build	
 clean:
@@ -88,8 +106,8 @@ build/%.o: %.c
 
 #Linker
 build/${TARGET}.axf: $(OBJECTS) $(LINKSCRIPT)
-	$(LD) $(LDFLAGS) -o $(TARGET).axf $(OBJECTS) '$(LIBM)' '$(LIBC)' '$(LIBGCC)'
+	$(LD) $(LDFLAGS) -o $(@) $(OBJECTS) '$(LIBM)' '$(LIBC)' '$(LIBGCC)'
 
 #binary file
 build/${TARGET}.bin: build/$(TARGET).axf
-	$(OBJCOPY) -O binary $(@) $(<)
+	$(OBJCOPY) -O binary $(<) $(@)
