@@ -9,90 +9,94 @@ STALLARISWARE = $(HOME)/Library/StellarisWare
 #Path to Linker Script
 LINKSCRIPT = start.ld
 
-#tools
+##
+##tools
+##
 FLASH = lm4flash
 CC = arm-none-eabi-gcc
 OBJCOPY = arm-none-eabi-objcopy
 LD = arm-none-eabi-ld
 AR = arm-none-eabi-ar
+RM = rm -rf
+##
+##Compiler flags
+##
 
-#Compiler flags
+#Using the Thumb Instruction Set
 CFLAGS += -mthumb
-					#Using the Thumb Instruction Set
+#The CPU Variant
 CFLAGS += -mcpu=cortex-m4
-			#The CPU Variant
+#Which floating point ABI to use
 CFLAGS += -mfloat-abi=softfp
-		#Which floating point ABI to use
+#The type of FPU we are using
 CFLAGS += -mfpu=fpv4-sp-d16
-			#The type of FPU we are using
-CFLAGS += -Os
-						#Compile with Size Optimizations
+#Compile with Size Optimizations <disabled for using interrupts>
+#CFLAGS += -Os
+#Create a separate function section
 CFLAGS += -ffunction-sections
-		#Create a separate function section
+#Create a separate data section
 CFLAGS += -fdata-sections
-			#Create a separate data section
+#Create dependency files (*.d)
 CFLAGS += -MD
-						#Create dependency files (*.d)
+#Comply with C99
 CFLAGS += -std=c99
-					#Comply with C99
+#Enable All Warnings 
 CFLAGS += -Wall
-						#Enable All Warnings 
+#More ANSI Checks
 CFLAGS += -pedantic
-					#More ANSI Checks
+#Flag used in driverlib for compiler specific flags
 CFLAGS += -Dgcc
-						#Flag used in driverlib for compiler specific flags
+#Flag used in driverlib for specifying the silicon version.
 CFLAGS += -DPART_LM4F120H5QR
-		#Flag used in driverlib for specifying the silicon version.
+#Include StellarisWare
 CFLAGS += -I$(STALLARISWARE)
-		#Include StellarisWare
+#Used in driverlib to determine what is loaded in rom.
 #CFLAGS += -DTARGET_IS_BLIZZARD_RA1
-	#Used in driverlib to determine what is loaded in rom.
 
-#Linker flags
+##
+##Linker flags
+##
+
+#Tell the linker to ignore functions that aren't used.
 LDFLAGS += --gc-sections
-			#Tell the linker to ignore functions that aren't used.
+#Path to Linker Script
 LDFLAGS += -T $(LINKSCRIPT)
-			#Path to Linker Script
+#Name of the application entry point
 LDFLAGS += --entry ResetISR
-			#Name of the application entry point
+
+##
+##Automatic part
+##
 
 #Get the name of the objects
 SOURCES += startup_gcc.c
 OBJECTS = $(SOURCES:%.c=build/%.o)
-#END OWN
 
-#copied vars from MAKEDEF
-#
-# Get the location of libgcc.a from the GCC front-end.
-#
+
+#Get the location of libgcc.a from the GCC front-end.
 LIBGCC=$(shell $(CC) $(CFLAGS) -print-libgcc-file-name)
 
-#
-# Get the location of libc.a from the GCC front-end.
-#
+#Get the location of libc.a from the GCC front-end.
 LIBC=$(shell $(CC) $(CFLAGS) -print-file-name=libc.a)
 
-#
-# Get the location of libm.a from the GCC front-end.
-#
+#Get the location of libm.a from the GCC front-end.
 LIBM=$(shell $(CC) $(CFLAGS) -print-file-name=libm.a)
-#END MAKEDEF
 
 #default target
-all: build build/$(TARGET).axf #build/$(TARGET).bin
+all: build build/$(TARGET).axf build/$(TARGET).bin
 
 #make the output dir
 build:
 	@mkdir -p build
 
 .PHONY: clean flash
-#Flash th
+#Flash the Stellaris
 flash: build/$(TARGET).bin
 	$(FLASH) $(<)
 
 #Clean the build	
 clean:
-	-rm -rf build
+	-$(RM) build
 
 	
 #Include automatically generated dependency files.
