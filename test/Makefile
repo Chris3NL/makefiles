@@ -33,4 +33,6 @@ settings: settings.mak
 settings.mak:
 	@echo "Creating settings.mak"
 	@echo "#Target Name\nTARGET = $(TARGET)\n#Location of StellarisWare\nSTELLARISWARE = $(STELLARISWARE)\n#tools\nFLASH = $(FLASH)\nCC = $(CC)\nAS = $(AS)\nOBJCOPY = $(OBJCOPY)\nLD = $(LD)\nAR = $(AR)" > settings.mak
+	@echo "#Target1" > settings3.mak
+	@echo "#Target2" >> settings3.mak
 	@echo "Done creating settings.mak"
