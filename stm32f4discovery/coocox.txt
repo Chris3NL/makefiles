@@ -1,0 +1,158 @@
+GCC HOME: C:\Program Files\GNU Tools ARM Embedded\4.7 2012q4\bin
+compile:
+    [mkdir] Created dir: C:\Users\Christian\R2DB\svn\dev\STM32F4_Discovery_CoOS\Debug\bin
+    [mkdir] Created dir: C:\Users\Christian\R2DB\svn\dev\STM32F4_Discovery_CoOS\Debug\obj
+       [cc] 44 total files to be compiled.
+       [cc] arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -Wall -ffunction-sections -g -Os -c -DSTM32F407VG -DSTM32F4XX -D__FPU_USED -DUSE_STDPERIPH_DRIVER -D__ASSEMBLY__ -IC:\Users\Christian\R2DB\svn\dev\CoOS\kernel -IC:\Users\Christian\R2DB\svn -IC:\Users\Christian\R2DB\svn\dev -IC:\Users\Christian\R2DB\svn\dev\r2db_brain -IC:\Users\Christian\R2DB\svn\dev\r2db_tasks -IC:\Users\Christian\R2DB\svn\dev\CoOS\Other -IC:\Users\Christian\R2DB\svn\dev\r2db_parts -IC:\Users\Christian\R2DB\svn\dev\cmsis_lib -IC:\Users\Christian\R2DB -IC:\Users\Christian\R2DB\svn\dev\cmsis_lib\include -IC:\Users\Christian\R2DB\svn\dev\cmsis_boot -IC:\Users\Christian\R2DB\svn\dev\CoOS\portable -IC:\Users\Christian\R2DB\svn\dev\cmsis -IC:\Users\Christian\R2DB\svn\dev\CoOS C:\Users\Christian\R2DB\svn\dev\delay.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\kernelHeap.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\core.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\timer.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\utility.c C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_adc.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\task.c C:\Users\Christian\R2DB\svn\dev\cmsis_boot\startup\startup_stm32f4xx.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\serviceReq.c C:\Users\Christian\R2DB\svn\dev\main.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_rcc.c C:\Users\Christian\R2DB\svn\dev\utils.c C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_control.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_adc.c C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_func.c C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_brain.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\mbox.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\mm.c C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_arm.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_usart(1).c C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_spi.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\time.c C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_arm.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\event.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_gpio.c C:\Users\Christian\R2DB\svn\dev\cmsis_boot\system_stm32f4xx.c C:\Users\Christian\R2DB\svn\dev\syscalls\syscalls.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_dma.c C:\Users\Christian\R2DB\svn\dev\shell.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\queue.c C:\Users\Christian\R2DB\svn\dev\CoOS\portable\GCC\port.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\mutex.c C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_pwm.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\flag.c C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_motor.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_spi.c C:\Users\Christian\R2DB\svn\dev\CoOS\portable\arch.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\misc.c C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_line.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\sem.c C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_drive.c C:\Users\Christian\R2DB\svn\dev\CoOS\kernel\hook.c C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_tim.c C:\Users\Christian\R2DB\svn\dev\usart.c
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\delay.c:2:
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\main.h:4,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_adc.c:14:
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_adc.h:16,
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_boot\startup\startup_stm32f4xx.c:22:
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\main.c:27:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\main.h:4,
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_rcc.c:56:
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_rcc.h:31,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\main.h:4,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\utils.c:8:
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_control.h:17,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_main.h:18,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_control.c:14:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_adc.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_adc.c:98:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_func.c:15:
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_func.h:17,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_main.h:18,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_brain.h:17,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_brain.c:14:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_arm.h:19,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_arm.c:14:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_arm.c: In function 'Arm_Z_Axis_Init':
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_arm.c:748:10: warning: unused variable 'Z_AXIS_HIGH' [-Wunused-variable]
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_arm.c:747:10: warning: unused variable 'Z_AXIS_LOW' [-Wunused-variable]
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_usart.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_usart(1).c:85:
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_spi.c:15:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_arm.h:17,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_main.h:18,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_arm.c:14:
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_arm.c: In function 'taskArm':
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_arm.c:26:4: warning: implicit declaration of function 'Task_Manager' [-Wimplicit-function-declaration]
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_gpio.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_gpio.c:79:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot\stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_boot\system_stm32f4xx.c:117:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\syscalls\syscalls.c:10:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_dma.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_dma.c:116:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\main.h:4,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\shell.c:9:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] C:\Users\Christian\R2DB\svn\dev\shell.c: In function 'readI2C':
+       [cc] C:\Users\Christian\R2DB\svn\dev\shell.c:378:19: warning: unused variable 'blk' [-Wunused-variable]
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_pwm.h:19,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_brain\r2db_pwm.c:15:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_motor.h:19,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_motor.c:15:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_motor.c: In function 'motor_av_value':
+       [cc] C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_motor.c:264:8: warning: unused variable 'pos_LM_AV' [-Wunused-variable]
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_spi.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_spi.c:152:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/misc.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\misc.c:70:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_parts\r2db_line.c:15:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_main.h:18,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_drive.h:17,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\r2db_tasks\r2db_task_drive.c:14:
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\include/stm32f4xx_tim.h:32,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\cmsis_lib\source\stm32f4xx_tim.c:114:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] In file included from C:\Users\Christian\R2DB\svn\dev\cmsis_boot/stm32f4xx.h:240:0,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\main.h:4,
+       [cc]                  from C:\Users\Christian\R2DB\svn\dev\usart.c:2:
+       [cc] C:\Users\Christian\R2DB\svn\dev\cmsis/core_cm4.h:135:0: warning: "__FPU_USED" redefined [enabled by default]
+       [cc] <command-line>:0:0: note: this is the location of the previous definition
+       [cc] C:\Users\Christian\R2DB\svn\dev\usart.c:88:2: warning: #warning "using COOS" [-Wcpp]
+       [cc] Starting link
+       [cc] arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Wl,-Map=STM32F4_Discovery_CoOS.map -Os -Wl,--gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\STM32F4_Discovery_CoOS -Wl,-TC:\CooCox\CoIDE\configuration\ProgramData\STM32F4_Discovery_CoOS/arm-gcc-link.ld -g -o STM32F4_Discovery_CoOS.elf ..\obj\delay.o ..\obj\kernelHeap.o ..\obj\core.o ..\obj\timer.o ..\obj\utility.o ..\obj\r2db_adc.o ..\obj\task.o ..\obj\startup_stm32f4xx.o ..\obj\serviceReq.o ..\obj\main.o ..\obj\stm32f4xx_rcc.o ..\obj\utils.o ..\obj\r2db_task_control.o ..\obj\stm32f4xx_adc.o ..\obj\r2db_func.o ..\obj\r2db_task_brain.o ..\obj\mbox.o ..\obj\mm.o ..\obj\r2db_arm.o ..\obj\stm32f4xx_usart(1).o ..\obj\r2db_spi.o ..\obj\time.o ..\obj\r2db_task_arm.o ..\obj\event.o ..\obj\stm32f4xx_gpio.o ..\obj\system_stm32f4xx.o ..\obj\syscalls.o ..\obj\stm32f4xx_dma.o ..\obj\shell.o ..\obj\queue.o ..\obj\port.o ..\obj\mutex.o ..\obj\r2db_pwm.o ..\obj\flag.o ..\obj\r2db_motor.o ..\obj\stm32f4xx_spi.o ..\obj\arch.o ..\obj\misc.o ..\obj\r2db_line.o ..\obj\sem.o ..\obj\r2db_task_drive.o ..\obj\hook.o ..\obj\stm32f4xx_tim.o ..\obj\usart.o -L..\..\.. -lm
+Program Size:
+      text	   data	    bss	    dec	    hex	filename
+     60552	   2628	  54312	 117492	  1caf4	STM32F4_Discovery_CoOS.elf
+
+BUILD SUCCESSFUL
+Total time: 20 seconds
